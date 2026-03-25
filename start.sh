@@ -1,5 +1,9 @@
 #!/bin/bash
 
+export USER=root
+export HOME=/root
+export DISPLAY=:1
+
 mkdir -p /root/.vnc
 echo "kali" | vncpasswd -f > /root/.vnc/passwd
 chmod 600 /root/.vnc/passwd
