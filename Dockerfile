@@ -3,11 +3,13 @@ FROM kalilinux/kali-rolling
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt update && apt install -y \
-    kali-linux-default \
+    kali-desktop-xfce \
     xfce4 xfce4-goodies \
     tightvncserver \
     novnc websockify \
-    sudo
+    sudo \
+    dbus-x11 \
+    x11-xserver-utils
 
 RUN useradd -m kali && echo "kali:kali" | chpasswd && adduser kali sudo
 
