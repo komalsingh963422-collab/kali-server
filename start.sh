@@ -20,4 +20,5 @@ vncserver :1 -geometry 1280x720 -depth 24
 
 sleep 5
 
-websockify --web=/usr/share/novnc/ 8080 localhost:5901
+cd /usr/share/novnc
+./utils/novnc_proxy --vnc localhost:5901 --listen 8080
